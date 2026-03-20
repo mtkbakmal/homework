@@ -1,10 +1,12 @@
 def is_prime(num):
-    if num % num == 0 and num % 2 == 0:
-        return True
+    if num <= 1:
+        return False
     elif num > 1000:
         return "Превышающее значение."
-    else:
+    elif num % 2 == 0 or num % 3 == 0:
         return False
+    else:
+        return True
 
 num = int(input("Введите число: "))
 print(is_prime(num))
