@@ -7,11 +7,11 @@ class Player:
         self.__armor = 0
         self.__age = 13
     
-    @property
+    @property   #Геттер аннотация
     def age(self):
         return self.__age
 
-    @age.setter
+    @age.setter     #Сеттер аннотация
     def age(self, age):
         if 13 < age < 100:
             self.__age = age
@@ -25,5 +25,7 @@ class Player:
 
 
 tom = Player("1", 0, 100, 0, "tommy", 18)
+print(tom.age)
+tom.age = 12
 tom.player_info()
 tom.game_info()
