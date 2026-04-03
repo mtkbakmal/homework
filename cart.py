@@ -25,11 +25,11 @@ class Cart:
             self.count = 0
 
     def total_price(self):
-        self.total_price = self.__price * self.count
+        return self.__price * self.count
     
     def __str__(self):
         return (f"Item: {self.__title}\n"
-        f"Price: {self.total_price}\n"
+        f"Total price: {self.total_price()}\n"
         f"Description {self.__description}\n"
         f"How many in cart: {self.count}")
 
